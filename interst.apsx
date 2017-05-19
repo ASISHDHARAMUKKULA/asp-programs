@@ -1,0 +1,44 @@
+<%@ Page Language="C#" %>
+
+<!DOCTYPE html>
+
+<script runat="server">
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        double amount = Double.Parse(textamount.Text);
+        double rate = Double.Parse(textrate.Text);
+
+        double interest = amount * rate / 100;
+        Label1.Text = interest.ToString("#####");
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <title>Interest calculator</title>
+    <style>
+    .bignum { 
+    color:red;
+}
+    </style>
+</head>
+<body>
+  <form id="form1" runat="server">
+    <h3>Interest calculation</h3>
+      Deposit Amount
+      <p></p>
+      <asp:TextBox ID="textamount" runat="server"></asp:TextBox>
+      
+      <p></p>
+      Intreset
+      <p></p>
+
+      <asp:TextBox ID="textrate" runat="server"></asp:TextBox>
+      <p></p>
+      <asp:Button ID="Button1" runat="server" Text="Calaculate" OnClick="Button1_Click" />
+      <p></p>
+      <asp:Label ID="Label1" runat="server" Cssclass="bignum" Text="Label"></asp:Label>
+  </form>
+</body>
+</html>
