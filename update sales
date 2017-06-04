@@ -1,0 +1,28 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="updatesales.aspx.cs" Inherits="updatesales" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <h2>update sales</h2>
+       
+        <p></p>
+        Enter invoice no
+        <p></p>
+        <asp:TextBox ID="txt1" runat="server"></asp:TextBox>
+        <p></p>
+        Enter amount
+        <p></p>
+        <asp:TextBox ID="txt2" runat="server"></asp:TextBox>
+        <p></p>
+        <asp:Button ID="Button1" runat="server" Text="update" OnClick="Button1_Click" />
+        <p></p>
+        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+        <p></p>
+    </form>
+</body>
+</html>
